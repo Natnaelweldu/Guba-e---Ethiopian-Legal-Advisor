@@ -18,6 +18,20 @@ index = pc.Index(os.getenv("PINECONE_INDEX_NAME", "gubae-legal-index"))
 
 MODEL_ID = "BAAI/bge-m3"
 
+def get_all_processed_files():
+    processed_dir = "/home/natty_w/Nate_Theodore/MLops/projects/Guba-e---Ethiopian-Legal-Advisor/back-end/data/processed"
+    
+    # Check if the directory even exists to avoid errors
+    if not os.path.exists(processed_dir):
+        print(f"Directory {processed_dir} not found. Returning empty list.")
+        return []
+
+    processed_files = os.listdir(processed_dir)
+    
+    # Return the list
+    return processed_files
+
+
 def get_relevant_context(user_query, top_k=3):
     """Step 1: The Retriever - Finds the law in the cloud database."""
     

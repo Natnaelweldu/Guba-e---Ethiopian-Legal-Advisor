@@ -18,19 +18,6 @@ def is_file_already_processed(filename):
     processed_path = os.path.join("data/processed", filename)
     return os.path.exists(processed_path)
 
-def get_all_processed_files():
-    processed_dir = "data/processed"
-    
-    # Check if the directory even exists to avoid errors
-    if not os.path.exists(processed_dir):
-        print(f"Directory {processed_dir} not found. Returning empty list.")
-        return []
-
-    processed_files = os.listdir(processed_dir)
-    
-    # Return the list
-    return processed_files
-
 def clean_and_ocr(pix):
     """Converts PDF page to image, crops the right side (English), and runs OCR."""
     # Convert PyMuPDF pixmap to OpenCV format

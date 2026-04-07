@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .generator import ask_gubae
+from .generator import ask_gubae, get_all_processed_files
 from .schema import ChatRequest
-from .ingestor import get_all_processed_files
 
 app = FastAPI()
 
