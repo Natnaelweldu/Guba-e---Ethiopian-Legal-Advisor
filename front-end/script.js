@@ -76,7 +76,7 @@ function toggleTypingIndicator(show = true) {
 // --- BACKEND INTEGRATION ---
 
 async function fetchGubaeResponse(userPrompt) {
-    const API_URL = "http://localhost:8000/chat"; 
+    const API_URL = "https://guba-e-ethiopian-legal-advisor.onrender.com"; 
     
     try {
         const response = await fetch(API_URL, {
@@ -89,7 +89,7 @@ async function fetchGubaeResponse(userPrompt) {
         
         const data = await response.json();
         
-        // CRITICAL: Return the whole object { answer, citation } 
+        // Return the whole object { answer, citation } 
         // so the caller can access both.
         return data; 
 
