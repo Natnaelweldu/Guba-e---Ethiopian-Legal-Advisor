@@ -316,38 +316,48 @@ button:active {
 
 /* Typing Indicator Animation */
 .typing-pulse span {
-    width: 6px;
-    height: 6px;
-    background: #888;
-    display: inline-block;
-    border-radius: 50%;
-    margin: 0 2px;
-    animation: bounce 1.4s infinite ease-in-out both;
+  width: 6px;
+  height: 6px;
+  background: #888;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: bounce 1.4s infinite ease-in-out both;
 }
 
-.typing-pulse span:nth-child(1) { animation-delay: -0.32s; }
-.typing-pulse span:nth-child(2) { animation-delay: -0.16s; }
+.typing-pulse span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.typing-pulse span:nth-child(2) {
+  animation-delay: -0.16s;
+}
 
 @keyframes bounce {
-    0%, 80%, 100% { transform: scale(0); }
-    40% { transform: scale(1.0); }
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
 }
 
 /* Citation Styling */
 .citation {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.75rem;
-    color: #aaa;
-    font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  color: #aaa;
+  font-style: italic;
 }
 
 /* Error Styling */
 .error-msg .msg-content {
-    border: 1px solid #ff4444;
-    background: rgba(255, 68, 68, 0.1);
+  border: 1px solid #ff4444;
+  background: rgba(255, 68, 68, 0.1);
 }

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .generator import ask_gubae
 from .schema import ChatRequest
+from .ingestor import get_all_processed_files
 
 app = FastAPI()
 
@@ -28,3 +29,7 @@ def chat_endpoint(request: ChatRequest):
         "citation": sources
     }
 
+@app.post("/get_processed_files")
+def get_processed_files():
+    processed_files = get_all_processed_files()
+    return processed_files

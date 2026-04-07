@@ -1,70 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guba'e | Legal AI</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <div class="brand">
-                <div class="logo-glow"></div>
-                <h2>Guba'e</h2>
-                <span class="badge">BETA</span>
-            </div>
-            <div class="library-status">
-                <h3>Active Library</h3>
-                <ul class="library-list">
-                    <li><span class="status-dot"></span> FDRE Constitution</li>
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo-glow"></div>
+          <h2>Guba'e</h2>
+          <span class="badge">BETA</span>
+        </div>
+        <div class="library-status">
+          <h3>Active Library</h3>
+          <ul class="library-list">
+            <!-- <li><span class="status-dot"></span> FDRE Constitution</li>
                     <li><span class="status-dot"></span> Civil Code (1960)</li>
                     <li><span class="status-dot"></span> Criminal Code</li>
-                    <li><span class="status-dot"></span> Labour Proclamation</li>
-                </ul>
+                    <li><span class="status-dot"></span> Labour Proclamation</li> -->
+          </ul>
+        </div>
+      </aside>
+
+      <main class="chat-container">
+        <header class="chat-header">
+          <div>
+            <h1>Legal Workspace</h1>
+            <p>Ask a question or cite an Ethiopian legal article</p>
+          </div>
+        </header>
+
+        <div class="chat-history" id="chat-history">
+          <div class="msg incoming">
+            <div class="avatar">G</div>
+            <div class="msg-content">
+              <p>
+                Welcome to Guba'e. I am initialized with the Ethiopian Federal
+                Laws and Commentaries. How can I assist your case today?
+              </p>
             </div>
-        </aside>
+          </div>
+        </div>
 
-        <main class="chat-container">
-            <header class="chat-header">
-                <div>
-                    <h1>Legal Workspace</h1>
-                    <p>Ask a question or cite an Ethiopian legal article</p>
-                </div>
-            </header>
+        <div class="input-area">
+          <form id="chat-form">
+            <textarea
+              id="user-input"
+              rows="1"
+              placeholder="Describe the legal issue... (Shift+Enter for new line)"
+              required
+              spellcheck="false"
+              autocomplete="off"
+            ></textarea>
 
-            <div class="chat-history" id="chat-history">
-                <div class="msg incoming">
-                    <div class="avatar">G</div>
-                    <div class="msg-content">
-                        <p>Welcome to Guba'e. I am initialized with the Ethiopian Federal Laws and Commentaries. How can I assist your case today?</p>
-                    </div>
-                </div>
-                </div>
-
-            <div class="input-area">
-                <form id="chat-form">
-                    <textarea 
-                        id="user-input" 
-                        rows="1" 
-                        placeholder="Describe the legal issue... (Shift+Enter for new line)" 
-                        required 
-                        spellcheck="false" 
-                        autocomplete="off"
-                    ></textarea>
-                    
-                    <button type="submit" id="send-btn" title="Send Request">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </main>
+            <button type="submit" id="send-btn" title="Send Request">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

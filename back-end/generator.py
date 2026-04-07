@@ -107,6 +107,6 @@ def ask_gubae(question):
     return answer, sources
 
 # --- Run it! ---
-if __name__ == "__main__":
-    user_q = input("Ask Guba'e about Ethiopian Law: ")
-    ask_gubae(user_q)
+# if __name__ == "__main__":
+#     user_q = input("Ask Guba'e about Ethiopian Law: ")
+#     ask_gubae(user_q)
