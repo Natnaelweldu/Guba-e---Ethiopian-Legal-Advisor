@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from generator import ask_gubae
-from schema import ChatRequest
+from .generator import ask_gubae
+from .schema import ChatRequest
 
 app = FastAPI()
 
